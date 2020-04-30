@@ -1057,14 +1057,14 @@ Users need to specify parameters such as "window size", "the number of time poin
 So without correct understanding of Spectrogram, I believe that it is difficult to utilize these existing modules.</p>
 <p>In this blog post, I will implement Spectrogram from scratch so that its implementation is cristal clear. 
 This blog post assumes that the audience understand Discrete Fourier Transform (DFT).
-If you do not understand it, I kindly ask you to read my previous blog post <a href="https://fairyonice.github.io/review-on-dicrete-fourier-transformspectrogram-from-scratch-in-python.html">Review on Discrete Fourier Transform</a>.</p>
+If you do not understand it, I kindly ask you to read my previous blog post <a href="https://fairyonice.github.io/review-on-dicrete-fourier-transform.html">Review on Discrete Fourier Transform</a>.</p>
 <p>Among all the youtube tutorial about Spectrogram, I found <a href="https://www.youtube.com/watch?v=g1_wcbGUcDY">The Short Time Fourier Transform | Digital Signal Processing</a> the most useful.
 This blog post also try to reproduce the plots shown in this video.</p>
 <h3 id="Reference">Reference<a class="anchor-link" href="#Reference">¶</a></h3><h4 id="Youtube">Youtube<a class="anchor-link" href="#Youtube">¶</a></h4><ul>
 <li><a href="https://www.youtube.com/watch?v=g1_wcbGUcDY">The Short Time Fourier Transform | Digital Signal Processing</a> </li>
 </ul>
 <h4 id="My-blog">My blog<a class="anchor-link" href="#My-blog">¶</a></h4><ul>
-<li><a href="https://fairyonice.github.io/review-on-dicrete-fourier-transformspectrogram-from-scratch-in-python.html">Review on Discrete Fourier Transform</a> </li>
+<li><a href="https://fairyonice.github.io/review-on-dicrete-fourier-transform.html">Review on Discrete Fourier Transform</a> </li>
 <li><a href="https://fairyonice.github.io/decode-the-dial-up-sounds-using-spectrogram.html">Decode the dial-up sounds using Spectrogram</a></li>
 </ul>
 <h2 id="Generate-synthetic-data">Generate synthetic data<a class="anchor-link" href="#Generate-synthetic-data">¶</a></h2><p>First, I will simulate 7-second analog dial sound signal.</p>
@@ -1681,12 +1681,12 @@ AAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Plot-the-generated-sound-signal-in-frequency-domain.">Plot the generated sound signal in frequency domain.<a class="anchor-link" href="#Plot-the-generated-sound-signal-in-frequency-domain.">¶</a></h2><h3 id="Discrete-Fourier-Transform-Functions">Discrete Fourier Transform Functions<a class="anchor-link" href="#Discrete-Fourier-Transform-Functions">¶</a></h3><p>These DTF functions are previously defined in <a href="https://fairyonice.github.io/review-on-dicrete-fourier-transformspectrogram-from-scratch-in-python.html">Review on Discrete Fourier Transform</a>.</p>
+<h2 id="Plot-the-generated-sound-signal-in-frequency-domain.">Plot the generated sound signal in frequency domain.<a class="anchor-link" href="#Plot-the-generated-sound-signal-in-frequency-domain.">¶</a></h2><h3 id="Discrete-Fourier-Transform-Functions">Discrete Fourier Transform Functions<a class="anchor-link" href="#Discrete-Fourier-Transform-Functions">¶</a></h3><p>These DTF functions are previously defined in <a href="https://fairyonice.github.io/review-on-dicrete-fourier-transform.html">Review on Discrete Fourier Transform</a>.</p>
 <p>Notice that get_xns only calculate the Fourier coefficients up to the Nyquest limit. 
 Also the absolute value of each Fourier coefficient is doubled to account for the symmetry of the Fourier coefficients around the Nyquest Limit.</p>
 <blockquote>
 It is impossible to calculate the frequencies above Nyquest Limit = sample rate / 2
-</blockquote><p>The discussion of the Nyquest Limit can be found in my previous blog <a href="https://fairyonice.github.io/review-on-dicrete-fourier-transformspectrogram-from-scratch-in-python.html">Review on Discrete Fourier Transform</a>. Section "Interpreting Fourier coefficients in Hertz".</p>
+</blockquote><p>The discussion of the Nyquest Limit can be found in my previous blog <a href="https://fairyonice.github.io/review-on-dicrete-fourier-transform.html">Review on Discrete Fourier Transform</a>. Section "Interpreting Fourier coefficients in Hertz".</p>
 <p>Please also see <a href="https://youtu.be/mkGsMWi_j4Q?t=501">this video</a> that discusses Nyquest limit.</p>
 </div>
 </div>
@@ -1964,7 +1964,7 @@ JpMkSZIkSZLUmskkSZIkSZIktfb/Ac4Nm4IggtToAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As disucssed in <a href="https://fairyonice.github.io/review-on-dicrete-fourier-transformspectrogram-from-scratch-in-python.html">Review on Discrete Fourier Transform</a> Section "Interpreting Fourier coefficients in Hertz", 
+<p>As disucssed in <a href="https://fairyonice.github.io/review-on-dicrete-fourier-transform.html">Review on Discrete Fourier Transform</a> Section "Interpreting Fourier coefficients in Hertz", 
 $X_k$, Fourier coefficient's frequency ($i.e. k$ in $x_k$) can be translated to frequency in herts as:</p>
 <p>$$
 \frac{\textrm{Sample Rate *} k}{\textrm{Total N of Sample Points} }\;\;\;\; \textrm{(Hz)}
